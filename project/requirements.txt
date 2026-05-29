@@ -1,0 +1,10 @@
+# Core project dependencies
+pandas>=2.0
+scikit-learn>=1.3
+
+# Optional, useful in notebooks
+datasets>=2.18
+transformers>=4.40
+sentence-transformers>=2.7
+torch>=2.2
+

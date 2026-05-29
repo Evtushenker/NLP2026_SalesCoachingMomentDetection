@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data and model artifacts
+project/data/raw/
+project/data/interim/
+project/data/processed/
+project/data/samples/
+project/models/
+project/checkpoints/
+project/runs/
+project/wandb/
+project/mlruns/
+project/outputs/
+/data/raw/
+/data/interim/
+/data/processed/
+/models/
+/checkpoints/
+/runs/
+/wandb/
+/mlruns/
+/outputs/
+
+# Environment variables
+.env
+.env.*
+!.env.example
