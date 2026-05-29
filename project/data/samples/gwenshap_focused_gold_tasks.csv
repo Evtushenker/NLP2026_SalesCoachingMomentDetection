@@ -1,0 +1,401 @@
+id,source,dialogue_id,window_start_turn,window_end_turn,speaker_window,text,recommendation_type,actionable_coaching_needed,unresolved_customer_concern,missing_next_step_action,missing_value_anchor,early_presentation_risk,notes
+gwenshap_modamart__0_w001_004,public_synthetic,modamart__0,1,4,"manager,client,manager,client","manager: Hi there! Thank you for taking the time to speak with me today. My name is Jamie, and I’m a sales representative from ModaMart. How are you today?
+client: Hi Jamie. I'm doing well, thanks. How about you?
+manager: I’m great, thank you! So, I understand you’ve been browsing our online store. Is there anything specific you’re looking for today?
+client: Well, I've been looking at some winter jackets, but I'm not sure about the quality and if they're worth the price.",handle_objection,1,1,0,0,0,gold_v1; changed=next_step_fixed; client concern appears; no next step fixed yet
+gwenshap_modamart__0_w003_006,public_synthetic,modamart__0,3,6,"manager,client,manager,client","manager: I’m great, thank you! So, I understand you’ve been browsing our online store. Is there anything specific you’re looking for today?
+client: Well, I've been looking at some winter jackets, but I'm not sure about the quality and if they're worth the price.
+manager: I completely understand your concerns. Our winter jackets are made from high-quality materials designed to keep you warm even in the harshest conditions. May I ask what specifically you’re looking for in a jacket?
+client: I mostly need something that’s really warm but also lightweight. I don’t want to feel like I'm carrying a heavy blanket around.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed; concern acknowledged and discovery continues
+gwenshap_modamart__0_w005_008,public_synthetic,modamart__0,5,8,"manager,client,manager,client","manager: I completely understand your concerns. Our winter jackets are made from high-quality materials designed to keep you warm even in the harshest conditions. May I ask what specifically you’re looking for in a jacket?
+client: I mostly need something that’s really warm but also lightweight. I don’t want to feel like I'm carrying a heavy blanket around.
+manager: That makes total sense. Nobody likes to feel weighed down. We have a range of jackets filled with high-loft down, which is incredibly warm yet very lightweight. Have you had a chance to read any reviews or check out our customer ratings?
+client: I did see some reviews, but I’m always a bit skeptical. Sometimes reviews can be misleading.",handle_objection,1,1,0,0,0,gold_v1; kept; new review-trust concern remains open
+gwenshap_modamart__0_w007_010,public_synthetic,modamart__0,7,10,"manager,client,manager,client","manager: That makes total sense. Nobody likes to feel weighed down. We have a range of jackets filled with high-loft down, which is incredibly warm yet very lightweight. Have you had a chance to read any reviews or check out our customer ratings?
+client: I did see some reviews, but I’m always a bit skeptical. Sometimes reviews can be misleading.
+manager: That’s a valid point. If you’re interested, I can send you a few detailed testimonials from customers who specifically mentioned how lightweight and warm our jackets are. Would that help?
+client: Yeah, that would be helpful. But I'm also concerned about sizing. I’ve had issues with ordering clothes online that don’t fit well.",handle_objection,1,1,0,0,0,gold_v1; changed=next_step_fixed|recommendation_type; review objection handled; sizing concern appears at window end
+gwenshap_modamart__0_w009_012,public_synthetic,modamart__0,9,12,"manager,client,manager,client","manager: That’s a valid point. If you’re interested, I can send you a few detailed testimonials from customers who specifically mentioned how lightweight and warm our jackets are. Would that help?
+client: Yeah, that would be helpful. But I'm also concerned about sizing. I’ve had issues with ordering clothes online that don’t fit well.
+manager: I hear you. Getting the right fit is crucial. We offer detailed sizing charts on our website, and we also have a very flexible return and exchange policy. If the size isn’t quite right, you can easily exchange it. Plus, I can guide you through finding the right size now. What size do you usually wear?
+client: I normally wear a medium, but sometimes I need a large depending on the brand.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed; fit objection handled and discovery continues
+gwenshap_modamart__0_w011_014,public_synthetic,modamart__0,11,14,"manager,client,manager,client","manager: I hear you. Getting the right fit is crucial. We offer detailed sizing charts on our website, and we also have a very flexible return and exchange policy. If the size isn’t quite right, you can easily exchange it. Plus, I can guide you through finding the right size now. What size do you usually wear?
+client: I normally wear a medium, but sometimes I need a large depending on the brand.
+manager: Understood. Our sizing tends to be true to fit, but I’d recommend measuring yourself using our online guide to ensure accuracy. I can also offer you a 10% discount on your first purchase, which might make taking the plunge a bit easier. How does that sound?
+client: That sounds pretty good. I definitely feel more comfortable with the return policy and the discount.",fix_next_step,1,0,1,0,0,gold_v1; changed=needs_discovery|objection_handling|recommendation_type; client is comfortable; concrete follow-up still missing
+gwenshap_modamart__0_w013_016,public_synthetic,modamart__0,13,16,"manager,client,manager,client","manager: Understood. Our sizing tends to be true to fit, but I’d recommend measuring yourself using our online guide to ensure accuracy. I can also offer you a 10% discount on your first purchase, which might make taking the plunge a bit easier. How does that sound?
+client: That sounds pretty good. I definitely feel more comfortable with the return policy and the discount.
+manager: I’m glad to hear that. I’ll send you the testimonials and the sizing guide right after our call. Is there anything else you’d like to know about our winter jackets?
+client: No, I think that covers it.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|recommendation_type; materials and timing are stated
+gwenshap_modamart__0_w015_018,public_synthetic,modamart__0,15,18,"manager,client,manager,client","manager: I’m glad to hear that. I’ll send you the testimonials and the sizing guide right after our call. Is there anything else you’d like to know about our winter jackets?
+client: No, I think that covers it.
+manager: Fantastic. I’ll email you the information, and if you have any more questions or need further assistance, feel free to reach out. We’re here to help. Thank you for your time and have a great day!
+client: Thank you, Jamie. I appreciate your help. Take care!",no_action,0,0,0,0,0,"gold_v1; changed=value_articulation|early_presentation_before_discovery|recommendation_type; closing window, not early presentation"
+gwenshap_modamart__1_w001_004,public_synthetic,modamart__1,1,4,"manager,client,manager,client","manager: ** Good morning, this is Sarah from ModaMart. How can I assist you today?
+client: ** Hi, this is John. I’ve been looking at some jackets on your website, but I’m not sure which one to choose. They all look pretty similar.
+manager: ** Hi John! Thanks for reaching out. I’d be happy to help you find the perfect jacket. Are you looking for something specific, like a certain material or style?
+client: ** Well, I’m mainly looking for something warm and stylish for the winter. I noticed some of the jackets say they're insulated, but I’m not sure how warm they really are.",handle_objection,1,1,0,0,0,gold_v1; changed=next_step_fixed; warmth uncertainty remains open
+gwenshap_modamart__1_w003_006,public_synthetic,modamart__1,3,6,"manager,client,manager,client","manager: ** Hi John! Thanks for reaching out. I’d be happy to help you find the perfect jacket. Are you looking for something specific, like a certain material or style?
+client: ** Well, I’m mainly looking for something warm and stylish for the winter. I noticed some of the jackets say they're insulated, but I’m not sure how warm they really are.
+manager: ** I understand. Our insulated jackets are designed to keep you warm even in very cold temperatures. We use high-quality down and synthetic materials. Do you have any preferences between down or synthetic insulation?
+client: ** I’ve heard down is warmer, but I’m worried about how it holds up in wet weather.",handle_objection,1,1,0,0,0,gold_v1; changed=recommendation_type; warmth handled; wet-weather concern appears
+gwenshap_modamart__1_w005_008,public_synthetic,modamart__1,5,8,"manager,client,manager,client","manager: ** I understand. Our insulated jackets are designed to keep you warm even in very cold temperatures. We use high-quality down and synthetic materials. Do you have any preferences between down or synthetic insulation?
+client: ** I’ve heard down is warmer, but I’m worried about how it holds up in wet weather.
+manager: ** That’s a great point. Down is incredibly warm, but it can lose its insulating properties when wet. Synthetic insulation, on the other hand, retains warmth even when damp. If you’re expecting to face wet conditions, I’d recommend going with a synthetic option.
+client: ** Got it. Also, some of the reviews mention sizing issues. I don’t want to go through the hassle of returning something that doesn’t fit.",handle_objection,1,1,0,0,0,gold_v1; changed=needs_discovery|objection_handling|early_presentation_before_discovery|recommendation_type; wet-weather concern handled; sizing concern appears
+gwenshap_modamart__1_w007_010,public_synthetic,modamart__1,7,10,"manager,client,manager,client","manager: ** That’s a great point. Down is incredibly warm, but it can lose its insulating properties when wet. Synthetic insulation, on the other hand, retains warmth even when damp. If you’re expecting to face wet conditions, I’d recommend going with a synthetic option.
+client: ** Got it. Also, some of the reviews mention sizing issues. I don’t want to go through the hassle of returning something that doesn’t fit.
+manager: ** Understandable. Our jackets tend to run true to size, but I can give you more precise advice if you can tell me your typical jacket size and any specific measurements.
+client: ** I'm usually a medium, but sometimes jackets feel tight around my shoulders.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|recommendation_type; sizing concern handled through discovery question
+gwenshap_modamart__1_w009_012,public_synthetic,modamart__1,9,12,"manager,client,manager,client","manager: ** Understandable. Our jackets tend to run true to size, but I can give you more precise advice if you can tell me your typical jacket size and any specific measurements.
+client: ** I'm usually a medium, but sometimes jackets feel tight around my shoulders.
+manager: ** Thanks for that info. If you’re concerned about the fit around the shoulders, I’d suggest going for a medium with a relaxed fit, or possibly sizing up to a large, especially with brands like NordicEdge that we carry. They offer more room in the shoulder area without making the jacket look oversized.
+client: ** That sounds like a good idea. I'll also need the jacket relatively soon. How long does shipping usually take?",handle_objection,1,1,0,0,0,gold_v1; changed=needs_discovery|objection_handling|early_presentation_before_discovery|recommendation_type; fit handled; shipping question appears
+gwenshap_modamart__1_w011_014,public_synthetic,modamart__1,11,14,"manager,client,manager,client","manager: ** Thanks for that info. If you’re concerned about the fit around the shoulders, I’d suggest going for a medium with a relaxed fit, or possibly sizing up to a large, especially with brands like NordicEdge that we carry. They offer more room in the shoulder area without making the jacket look oversized.
+client: ** That sounds like a good idea. I'll also need the jacket relatively soon. How long does shipping usually take?
+manager: ** Our standard shipping typically takes 3-5 business days, and we offer expedited options if you need it sooner. Are you looking to receive it by a particular date?
+client: ** I'd like to have it within the next week if possible.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|objection_handling|early_presentation_before_discovery|recommendation_type; shipping handled and date discovery continues
+gwenshap_modamart__1_w013_016,public_synthetic,modamart__1,13,16,"manager,client,manager,client","manager: ** Our standard shipping typically takes 3-5 business days, and we offer expedited options if you need it sooner. Are you looking to receive it by a particular date?
+client: ** I'd like to have it within the next week if possible.
+manager: ** In that case, I’d recommend our express shipping option. Let’s finalize your choice of jacket first. Are you leaning towards a specific model?
+client: ** I think I’ll go with the NordicEdge Synthetic Insulated Jacket in large, like you mentioned.",fix_next_step,1,0,1,0,0,gold_v1; changed=needs_discovery|early_presentation_before_discovery|recommendation_type; choice is made; order/follow-up should be fixed
+gwenshap_modamart__1_w015_018,public_synthetic,modamart__1,15,18,"manager,client,manager,client","manager: ** In that case, I’d recommend our express shipping option. Let’s finalize your choice of jacket first. Are you leaning towards a specific model?
+client: ** I think I’ll go with the NordicEdge Synthetic Insulated Jacket in large, like you mentioned.
+manager: ** Great choice! I’ll get that set up for you with express shipping. You should receive it within 2-3 business days. Can I assist you with anything else today?
+client: ** No, that's all for now. Thanks for your help!",no_action,0,0,0,0,0,gold_v1; changed=value_articulation|recommendation_type; order setup and delivery window stated
+gwenshap_modamart__1_w017_020,public_synthetic,modamart__1,17,20,"manager,client,manager,client","manager: ** Great choice! I’ll get that set up for you with express shipping. You should receive it within 2-3 business days. Can I assist you with anything else today?
+client: ** No, that's all for now. Thanks for your help!
+manager: ** You're welcome, John! If you have any other questions, feel free to contact us. Have a great day!
+client: ** Thanks, you too.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed|recommendation_type; generic closing only
+gwenshap_modamart__2_w001_004,public_synthetic,modamart__2,1,4,"manager,client,manager,client","manager: Hi there, this is Jake from ModaMart. How are you today?
+client: Hi Jake, I'm doing okay. Just busy with work. What can I help you with?
+manager: I completely understand! I'll keep it brief. I wanted to touch base about your recent online browsing and see if you had any questions or needed assistance with anything.
+client: Well, I have been looking at some of your new fall collection, but I'm honestly not sure about a few things.",handle_objection,1,1,0,0,0,gold_v1; changed=next_step_fixed; client says unsure; no handling yet
+gwenshap_modamart__2_w003_006,public_synthetic,modamart__2,3,6,"manager,client,manager,client","manager: I completely understand! I'll keep it brief. I wanted to touch base about your recent online browsing and see if you had any questions or needed assistance with anything.
+client: Well, I have been looking at some of your new fall collection, but I'm honestly not sure about a few things.
+manager: That's great to hear you've been checking out our new collection! What specifically has you unsure?
+client: The main thing is sizing. I've found that with some brands, the sizes are all over the place. I'm worried about ordering something that doesn't fit right.",handle_objection,1,1,0,0,0,gold_v1; kept; specific sizing concern appears
+gwenshap_modamart__2_w005_008,public_synthetic,modamart__2,5,8,"manager,client,manager,client","manager: That's great to hear you've been checking out our new collection! What specifically has you unsure?
+client: The main thing is sizing. I've found that with some brands, the sizes are all over the place. I'm worried about ordering something that doesn't fit right.
+manager: Got it. Sizing can definitely be tricky. At ModaMart, we actually provide detailed sizing charts for each brand. Have you had a chance to look at those?
+client: I saw them, but I'm still skeptical. Returning items is just such a hassle.",handle_objection,1,1,0,0,0,gold_v1; changed=recommendation_type; sizing handled; return hassle concern appears
+gwenshap_modamart__2_w007_010,public_synthetic,modamart__2,7,10,"manager,client,manager,client","manager: Got it. Sizing can definitely be tricky. At ModaMart, we actually provide detailed sizing charts for each brand. Have you had a chance to look at those?
+client: I saw them, but I'm still skeptical. Returning items is just such a hassle.
+manager: I hear you. To make the process easier, we offer free returns and exchanges within 30 days. We can even schedule a pickup for the return. Does that address your concern?
+client: That does help, but I'm also a bit concerned about the quality. I've had bad experiences with online shopping before.",handle_objection,1,1,0,0,0,gold_v1; changed=next_step_fixed|early_presentation_before_discovery|recommendation_type; return handled; quality concern appears
+gwenshap_modamart__2_w009_012,public_synthetic,modamart__2,9,12,"manager,client,manager,client","manager: I hear you. To make the process easier, we offer free returns and exchanges within 30 days. We can even schedule a pickup for the return. Does that address your concern?
+client: That does help, but I'm also a bit concerned about the quality. I've had bad experiences with online shopping before.
+manager: I understand your concerns. At ModaMart, we pride ourselves on offering high-quality products, but we also have customer reviews for most items. Reading them might give you a better sense of the quality. Have you checked those out?
+client: No, I haven't really looked at the reviews yet.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|next_step_fixed|early_presentation_before_discovery|recommendation_type; quality concern handled via reviews check
+gwenshap_modamart__2_w011_014,public_synthetic,modamart__2,11,14,"manager,client,manager,client","manager: I understand your concerns. At ModaMart, we pride ourselves on offering high-quality products, but we also have customer reviews for most items. Reading them might give you a better sense of the quality. Have you checked those out?
+client: No, I haven't really looked at the reviews yet.
+manager: I highly recommend it. They can be very informative. Plus, if you find that you're still not satisfied with the product, our customer service team is here to ensure you have a positive experience.
+client: Alright, I'll take a look at the reviews. One more thing—do you have any promotions or discounts going on right now?",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; discount question appears at window end
+gwenshap_modamart__2_w013_016,public_synthetic,modamart__2,13,16,"manager,client,manager,client","manager: I highly recommend it. They can be very informative. Plus, if you find that you're still not satisfied with the product, our customer service team is here to ensure you have a positive experience.
+client: Alright, I'll take a look at the reviews. One more thing—do you have any promotions or discounts going on right now?
+manager: I'm glad you asked! We currently have a 15% off promotion for first-time online customers. I can send you a discount code if you're interested.
+client: That sounds good. Yeah, please send me the code.",no_action,0,0,0,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; discount request handled with send-code offer
+gwenshap_modamart__2_w015_018,public_synthetic,modamart__2,15,18,"manager,client,manager,client","manager: I'm glad you asked! We currently have a 15% off promotion for first-time online customers. I can send you a discount code if you're interested.
+client: That sounds good. Yeah, please send me the code.
+manager: Will do! I'll email the discount code to you right after this call. Is there anything else I can assist you with today?
+client: No, I think that covers my questions for now. Thanks for your help.",no_action,0,0,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; emailing code after call is fixed
+gwenshap_modamart__2_w017_020,public_synthetic,modamart__2,17,20,"manager,client,manager,client","manager: Will do! I'll email the discount code to you right after this call. Is there anything else I can assist you with today?
+client: No, I think that covers my questions for now. Thanks for your help.
+manager: You're welcome! Don't hesitate to reach out if you have any more questions, and enjoy shopping at ModaMart. Have a great day!
+client: Thanks, Jake. You too.",no_action,0,0,0,0,0,"gold_v1; changed=value_articulation|next_step_fixed|early_presentation_before_discovery|recommendation_type; closing window, not early presentation"
+gwenshap_modamart__3_w001_004,public_synthetic,modamart__3,1,4,"manager,client,manager,client","manager: Good afternoon! Thank you for calling ModaMart. My name is Alex. How can I assist you today?
+client: Hi, Alex. I'm looking to revamp my wardrobe and I've heard good things about ModaMart, but I've had some bad experiences with online shopping in the past. I'm not sure if I should give it another try.
+manager: I understand your concerns. Online shopping can be tricky sometimes. Could you tell me more about what issues you've faced before?
+client: Well, the last few times, the clothes didn't fit right and returning them was such a hassle. Plus, the quality wasn't as good as advertised.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|next_step_fixed|recommendation_type; concerns elicited but not handled yet
+gwenshap_modamart__3_w003_006,public_synthetic,modamart__3,3,6,"manager,client,manager,client","manager: I understand your concerns. Online shopping can be tricky sometimes. Could you tell me more about what issues you've faced before?
+client: Well, the last few times, the clothes didn't fit right and returning them was such a hassle. Plus, the quality wasn't as good as advertised.
+manager: I'm really sorry to hear that. At ModaMart, we offer a detailed sizing guide to help with the fit, and our return process is designed to be hassle-free. You can return items within 30 days for a full refund. As for quality, all our products go through rigorous quality checks before being shipped.
+client: That sounds better, but I'm still skeptical about the fit. How accurate are your sizing charts?",handle_objection,1,1,0,0,0,gold_v1; changed=recommendation_type; initial concerns handled; fit skepticism appears
+gwenshap_modamart__3_w005_008,public_synthetic,modamart__3,5,8,"manager,client,manager,client","manager: I'm really sorry to hear that. At ModaMart, we offer a detailed sizing guide to help with the fit, and our return process is designed to be hassle-free. You can return items within 30 days for a full refund. As for quality, all our products go through rigorous quality checks before being shipped.
+client: That sounds better, but I'm still skeptical about the fit. How accurate are your sizing charts?
+manager: Our sizing charts are updated regularly based on customer feedback and measurements. Additionally, we offer a virtual fitting room feature where you can input your measurements and see how different sizes might fit you.
+client: Hmm. That sounds helpful, but it's still a leap of faith for me. I hate dealing with returns.",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; fit handled; return friction concern appears
+gwenshap_modamart__3_w007_010,public_synthetic,modamart__3,7,10,"manager,client,manager,client","manager: Our sizing charts are updated regularly based on customer feedback and measurements. Additionally, we offer a virtual fitting room feature where you can input your measurements and see how different sizes might fit you.
+client: Hmm. That sounds helpful, but it's still a leap of faith for me. I hate dealing with returns.
+manager: I completely understand. To make it even easier, we can provide you with a prepaid return label along with your order, so you don't have to worry about shipping costs if something doesn't fit.
+client: That’s a nice touch. I’m also concerned about the pricing. I want good quality but at a reasonable price.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; returns handled; pricing concern appears
+gwenshap_modamart__3_w009_012,public_synthetic,modamart__3,9,12,"manager,client,manager,client","manager: I completely understand. To make it even easier, we can provide you with a prepaid return label along with your order, so you don't have to worry about shipping costs if something doesn't fit.
+client: That’s a nice touch. I’m also concerned about the pricing. I want good quality but at a reasonable price.
+manager: We strive to offer quality products at competitive prices. Plus, if you sign up for our ModaMart Rewards program, you’ll receive exclusive discounts and early access to sales. As a new customer, we can offer you a 20% discount on your first purchase.
+client: That’s pretty tempting. I might give it a try. What are the next steps?",fix_next_step,1,0,1,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; pricing handled; client asks next steps
+gwenshap_modamart__3_w011_014,public_synthetic,modamart__3,11,14,"manager,client,manager,client","manager: We strive to offer quality products at competitive prices. Plus, if you sign up for our ModaMart Rewards program, you’ll receive exclusive discounts and early access to sales. As a new customer, we can offer you a 20% discount on your first purchase.
+client: That’s pretty tempting. I might give it a try. What are the next steps?
+manager: Great to hear! You can visit our website and sign up for the ModaMart Rewards program right away. If you need any assistance with sizing or product details, feel free to reach out to our customer service team. They'll be more than happy to help.
+client: Alright, I’ll check it out. Thank you for addressing my concerns, Alex.",no_action,0,0,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; website/rewards next step is stated
+gwenshap_modamart__3_w013_016,public_synthetic,modamart__3,13,16,"manager,client,manager,client","manager: Great to hear! You can visit our website and sign up for the ModaMart Rewards program right away. If you need any assistance with sizing or product details, feel free to reach out to our customer service team. They'll be more than happy to help.
+client: Alright, I’ll check it out. Thank you for addressing my concerns, Alex.
+manager: It’s my pleasure. Thank you for considering ModaMart. Have a great day, and happy shopping!
+client: Thanks, you too. Bye.",no_action,0,0,0,0,0,gold_v1; changed=value_articulation|next_step_fixed|early_presentation_before_discovery|recommendation_type; closing window only
+gwenshap_modamart__4_w001_004,public_synthetic,modamart__4,1,4,"manager,client,manager,client","manager: Good afternoon, thank you for calling ModaMart. My name is Sarah, how can I assist you today?
+client: Hi Sarah, I'm considering making a big purchase, but I have some concerns. Can you help me with that?
+manager: Of course! What products are you looking at, and what concerns do you have?
+client: I'm looking at the winter jackets, specifically the Model X. It seems a bit pricey, and I'm not sure if it's worth the investment.",handle_objection,1,1,0,0,0,gold_v1; changed=next_step_fixed; price concern appears; no handling yet
+gwenshap_modamart__4_w003_006,public_synthetic,modamart__4,3,6,"manager,client,manager,client","manager: Of course! What products are you looking at, and what concerns do you have?
+client: I'm looking at the winter jackets, specifically the Model X. It seems a bit pricey, and I'm not sure if it's worth the investment.
+manager: I understand your concern. The Model X jacket is one of our premium products made with high-quality insulation and weather-resistant materials. It’s designed to keep you warm and dry in extreme conditions. Are you planning on using it for everyday wear, or just for specific activities?
+client: Mostly for commuting to work, but I also do some hiking on the weekends. My main issue is that I bought a different jacket last winter, and it didn't hold up well at all.",handle_objection,1,1,0,0,0,gold_v1; changed=recommendation_type; price handled partially; durability concern appears
+gwenshap_modamart__4_w005_008,public_synthetic,modamart__4,5,8,"manager,client,manager,client","manager: I understand your concern. The Model X jacket is one of our premium products made with high-quality insulation and weather-resistant materials. It’s designed to keep you warm and dry in extreme conditions. Are you planning on using it for everyday wear, or just for specific activities?
+client: Mostly for commuting to work, but I also do some hiking on the weekends. My main issue is that I bought a different jacket last winter, and it didn't hold up well at all.
+manager: I'm sorry to hear that. Do you remember what brand or model it was? Maybe I can understand better what went wrong last time.
+client: It was another brand's mid-tier model. It started to lose its warmth after a couple of months and the zipper broke.",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; manager probes past issue instead of resolving yet
+gwenshap_modamart__4_w007_010,public_synthetic,modamart__4,7,10,"manager,client,manager,client","manager: I'm sorry to hear that. Do you remember what brand or model it was? Maybe I can understand better what went wrong last time.
+client: It was another brand's mid-tier model. It started to lose its warmth after a couple of months and the zipper broke.
+manager: That’s definitely frustrating. The Model X jacket has a reinforced zipper and double-stitched seams for durability. Plus, it comes with a one-year warranty that covers any manufacturing defects, so you won’t have to worry about those issues again.
+client: That sounds reassuring, but it's still quite a lot of money. Do you offer any payment plans?",handle_objection,1,1,0,0,0,gold_v1; changed=value_articulation|objection_handling|recommendation_type; durability handled; payment-plan objection appears
+gwenshap_modamart__4_w009_012,public_synthetic,modamart__4,9,12,"manager,client,manager,client","manager: That’s definitely frustrating. The Model X jacket has a reinforced zipper and double-stitched seams for durability. Plus, it comes with a one-year warranty that covers any manufacturing defects, so you won’t have to worry about those issues again.
+client: That sounds reassuring, but it's still quite a lot of money. Do you offer any payment plans?
+manager: Yes, we do offer financing options. You can break down the cost into manageable monthly payments at 0% interest if paid within 6 months. We also have a 30-day return policy if you’re not completely satisfied with your purchase.
+client: That definitely helps. Another thing, how do I know if it will fit well? I have a hard time finding jackets that fit just right.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; financing handled; fit concern appears
+gwenshap_modamart__4_w011_014,public_synthetic,modamart__4,11,14,"manager,client,manager,client","manager: Yes, we do offer financing options. You can break down the cost into manageable monthly payments at 0% interest if paid within 6 months. We also have a 30-day return policy if you’re not completely satisfied with your purchase.
+client: That definitely helps. Another thing, how do I know if it will fit well? I have a hard time finding jackets that fit just right.
+manager: We offer a comprehensive size guide on our website, but I can also help you over the phone. Could you provide me with your measurements? Additionally, if the size you choose doesn’t fit, you can exchange it free of charge.
+client: Great. I’m about 5'8"" and around 160 pounds.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|early_presentation_before_discovery|recommendation_type; fit concern handled through measurements
+gwenshap_modamart__4_w013_016,public_synthetic,modamart__4,13,16,"manager,client,manager,client","manager: We offer a comprehensive size guide on our website, but I can also help you over the phone. Could you provide me with your measurements? Additionally, if the size you choose doesn’t fit, you can exchange it free of charge.
+client: Great. I’m about 5'8"" and around 160 pounds.
+manager: Based on that, I would recommend a size Medium. However, it might be a good idea to check our size guide online for more detailed measurements.
+client: Okay, I'll check the size guide and think it over. Can I call back if I decide to make the purchase?",fix_next_step,1,0,1,0,0,gold_v1; changed=needs_discovery|objection_handling|early_presentation_before_discovery|recommendation_type; size recommendation given; follow-up not fixed
+gwenshap_modamart__4_w015_018,public_synthetic,modamart__4,15,18,"manager,client,manager,client","manager: Based on that, I would recommend a size Medium. However, it might be a good idea to check our size guide online for more detailed measurements.
+client: Okay, I'll check the size guide and think it over. Can I call back if I decide to make the purchase?
+manager: Absolutely, you can call us anytime, or you can order directly through our website at your convenience. Is there anything else I can assist you with right now?
+client: No, I think that's it for now. Thanks for all the information, Sarah. You've been very helpful.",fix_next_step,1,0,1,0,0,gold_v1; changed=value_articulation|objection_handling|recommendation_type; client leaves to think; no concrete follow-up time/channel
+gwenshap_modamart__4_w017_020,public_synthetic,modamart__4,17,20,"manager,client,manager,client","manager: Absolutely, you can call us anytime, or you can order directly through our website at your convenience. Is there anything else I can assist you with right now?
+client: No, I think that's it for now. Thanks for all the information, Sarah. You've been very helpful.
+manager: My pleasure! Feel free to reach out if you have any more questions. Have a great day!
+client: You too, thanks!",no_action,0,0,0,0,0,gold_v1; changed=value_articulation|next_step_fixed|early_presentation_before_discovery|recommendation_type; generic closing only
+gwenshap_modamart__5_w001_004,public_synthetic,modamart__5,1,4,"manager,client,manager,client","manager: Good afternoon! Thanks for calling ModaMart. My name is Jessica. How can I assist you today?
+client: Hi Jessica. I'm considering buying some new clothes for the fall season, but I'm a bit overwhelmed by the options. I usually shop in-store, and online shopping's got me confused with sizing and returns.
+manager: I completely understand. Finding the right fit online can be tricky. Are there specific items or styles you're looking for?
+client: Yes, I'm looking for some casual and business-casual pieces like sweaters, blouses, and maybe a new pair of jeans.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed; initial discovery is appropriate
+gwenshap_modamart__5_w003_006,public_synthetic,modamart__5,3,6,"manager,client,manager,client","manager: I completely understand. Finding the right fit online can be tricky. Are there specific items or styles you're looking for?
+client: Yes, I'm looking for some casual and business-casual pieces like sweaters, blouses, and maybe a new pair of jeans.
+manager: Great choice for the fall season! At ModaMart, we have detailed size charts and fit guides that can help you determine the best size. Additionally, our return policy is pretty flexible. If something doesn't fit, you can return or exchange it within 30 days.
+client: That sounds helpful. But what about the quality? Sometimes online products don’t match the pictures and descriptions.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling; fit/returns handled; quality concern appears
+gwenshap_modamart__5_w005_008,public_synthetic,modamart__5,5,8,"manager,client,manager,client","manager: Great choice for the fall season! At ModaMart, we have detailed size charts and fit guides that can help you determine the best size. Additionally, our return policy is pretty flexible. If something doesn't fit, you can return or exchange it within 30 days.
+client: That sounds helpful. But what about the quality? Sometimes online products don’t match the pictures and descriptions.
+manager: That's a common concern. ModaMart ensures high quality for all our products, and we provide customer reviews and ratings for most items. This way, you can see what other customers think before making a purchase. Our customer service team is also available to help with any issues you might have once you receive your order.
+client: That’s reassuring. Still, I'm worried about the hassle of returns if I don’t like something. I've had bad experiences with other retailers.",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; quality handled; returns concern appears
+gwenshap_modamart__5_w007_010,public_synthetic,modamart__5,7,10,"manager,client,manager,client","manager: That's a common concern. ModaMart ensures high quality for all our products, and we provide customer reviews and ratings for most items. This way, you can see what other customers think before making a purchase. Our customer service team is also available to help with any issues you might have once you receive your order.
+client: That’s reassuring. Still, I'm worried about the hassle of returns if I don’t like something. I've had bad experiences with other retailers.
+manager: I hear you. ModaMart aims to make the returns process as smooth as possible. You can initiate a return directly from your online account, and we provide a prepaid shipping label to send items back without any additional cost.
+client: Okay, that does sound convenient. How long does the refund process usually take?",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; returns handled; refund timing question appears
+gwenshap_modamart__5_w009_012,public_synthetic,modamart__5,9,12,"manager,client,manager,client","manager: I hear you. ModaMart aims to make the returns process as smooth as possible. You can initiate a return directly from your online account, and we provide a prepaid shipping label to send items back without any additional cost.
+client: Okay, that does sound convenient. How long does the refund process usually take?
+manager: Once we receive the returned items, refunds are typically processed within 3 to 5 business days. You'll receive an email confirmation when the refund has been issued.
+client: That sounds fair. I think I’ll give it a try. How do I get started?",fix_next_step,1,0,1,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; refund timing handled; client asks how to start
+gwenshap_modamart__5_w011_014,public_synthetic,modamart__5,11,14,"manager,client,manager,client","manager: Once we receive the returned items, refunds are typically processed within 3 to 5 business days. You'll receive an email confirmation when the refund has been issued.
+client: That sounds fair. I think I’ll give it a try. How do I get started?
+manager: Fantastic! You can start by visiting our website and browsing the fall collection. If you have any questions at any point, feel free to contact us via chat, phone, or email. We’re here to help.
+client: Thanks, Jessica. You've been very helpful.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed|early_presentation_before_discovery|recommendation_type; start path and support channels are stated
+gwenshap_modamart__5_w013_016,public_synthetic,modamart__5,13,16,"manager,client,manager,client","manager: Fantastic! You can start by visiting our website and browsing the fall collection. If you have any questions at any point, feel free to contact us via chat, phone, or email. We’re here to help.
+client: Thanks, Jessica. You've been very helpful.
+manager: It’s my pleasure! Have a great day shopping with ModaMart, and enjoy your new fall wardrobe!
+client: Thanks again. Bye!",no_action,0,0,0,0,0,gold_v1; changed=value_articulation|early_presentation_before_discovery|recommendation_type; closing window only
+gwenshap_modamart__6_w001_004,public_synthetic,modamart__6,1,4,"manager,client,manager,client","manager: Thank you for calling ModaMart. This is Alex. How can I help you today?
+client: Hi Alex. I’m Lisa. I’ve been looking at your website, but I’m not sure about the sizes for a few items. They seem to vary a lot.
+manager: I understand, Lisa. Sizes can be tricky. Are there specific items you’re concerned about?
+client: Yes, the summer dresses. I’m usually a medium, but sometimes a small fits better. It’s confusing.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|next_step_fixed|recommendation_type; sizing uncertainty remains open
+gwenshap_modamart__6_w003_006,public_synthetic,modamart__6,3,6,"manager,client,manager,client","manager: I understand, Lisa. Sizes can be tricky. Are there specific items you’re concerned about?
+client: Yes, the summer dresses. I’m usually a medium, but sometimes a small fits better. It’s confusing.
+manager: Got it. We actually have a detailed size chart for each product. Have you had a chance to look at those?
+client: I saw the size chart but I’ve had problems with online size charts before. They don't always match up with the actual fit.",handle_objection,1,1,0,0,0,gold_v1; changed=value_articulation|objection_handling|recommendation_type; size-chart answer is partial; chart distrust appears
+gwenshap_modamart__6_w005_008,public_synthetic,modamart__6,5,8,"manager,client,manager,client","manager: Got it. We actually have a detailed size chart for each product. Have you had a chance to look at those?
+client: I saw the size chart but I’ve had problems with online size charts before. They don't always match up with the actual fit.
+manager: That's a common issue. One thing we offer is a virtual stylist service. Would you be interested in setting up a quick consultation to get the best fit recommendations?
+client: That sounds helpful, but I’m also worried about the return policy if things don’t fit. Is it easy to return items?",handle_objection,1,1,0,0,0,gold_v1; changed=recommendation_type; virtual stylist offered; return-policy concern appears
+gwenshap_modamart__6_w007_010,public_synthetic,modamart__6,7,10,"manager,client,manager,client","manager: That's a common issue. One thing we offer is a virtual stylist service. Would you be interested in setting up a quick consultation to get the best fit recommendations?
+client: That sounds helpful, but I’m also worried about the return policy if things don’t fit. Is it easy to return items?
+manager: Absolutely. You have a 30-day window to return items for a full refund. We also offer free return shipping for all online purchases.
+client: That sounds good. But I'm also hesitant because I’ve had bad experiences with slow shipping.",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; returns handled; shipping concern appears
+gwenshap_modamart__6_w009_012,public_synthetic,modamart__6,9,12,"manager,client,manager,client","manager: Absolutely. You have a 30-day window to return items for a full refund. We also offer free return shipping for all online purchases.
+client: That sounds good. But I'm also hesitant because I’ve had bad experiences with slow shipping.
+manager: We hear you, Lisa. At ModaMart, we prioritize fast and reliable shipping. Most of our orders arrive within 5 business days. Plus, we offer expedited shipping if you need your items sooner.
+client: Alright, that’s reassuring. How do I set up the virtual stylist consultation?",fix_next_step,1,0,1,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; shipping handled; client asks setup process
+gwenshap_modamart__6_w011_014,public_synthetic,modamart__6,11,14,"manager,client,manager,client","manager: We hear you, Lisa. At ModaMart, we prioritize fast and reliable shipping. Most of our orders arrive within 5 business days. Plus, we offer expedited shipping if you need your items sooner.
+client: Alright, that’s reassuring. How do I set up the virtual stylist consultation?
+manager: You can easily schedule it on our website or I can set it up for you right now. What’s your preferred time and date?
+client: I’m free tomorrow afternoon. Maybe around 2 PM?",no_action,0,0,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; consultation scheduling is concrete
+gwenshap_modamart__6_w013_016,public_synthetic,modamart__6,13,16,"manager,client,manager,client","manager: You can easily schedule it on our website or I can set it up for you right now. What’s your preferred time and date?
+client: I’m free tomorrow afternoon. Maybe around 2 PM?
+manager: Perfect. I’ve scheduled your virtual stylist consultation for tomorrow at 2 PM. You’ll receive a confirmation email shortly. Is there anything else I can assist you with?
+client: No, that’s all for now. Thanks, Alex.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|value_articulation; appointment and confirmation are fixed
+gwenshap_modamart__6_w015_018,public_synthetic,modamart__6,15,18,"manager,client,manager,client","manager: Perfect. I’ve scheduled your virtual stylist consultation for tomorrow at 2 PM. You’ll receive a confirmation email shortly. Is there anything else I can assist you with?
+client: No, that’s all for now. Thanks, Alex.
+manager: My pleasure, Lisa. Have a great day and we’ll talk to you tomorrow.
+client: Thanks, bye!",no_action,0,0,0,0,0,gold_v1; changed=recommendation_type; closing references tomorrow appointment
+gwenshap_modamart__7_w001_004,public_synthetic,modamart__7,1,4,"manager,client,manager,client","manager: Good afternoon, this is Alex from ModaMart. How can I help you today?
+client: Hi, Alex. I'm looking to update my wardrobe for the upcoming season, but I'm having trouble finding items that fit well and are in my budget.
+manager: I understand. Finding the perfect fit and staying within budget can be challenging. Could you tell me a bit more about what you're specifically looking for?
+client: Sure. I'm looking for casual clothes like jeans and tops, but I also want a couple of more formal outfits for work. My budget is around $300.",anchor_value,1,0,0,1,0,gold_v1; changed=objection_handling|next_step_fixed; needs and budget collected; value not yet anchored
+gwenshap_modamart__7_w003_006,public_synthetic,modamart__7,3,6,"manager,client,manager,client","manager: I understand. Finding the perfect fit and staying within budget can be challenging. Could you tell me a bit more about what you're specifically looking for?
+client: Sure. I'm looking for casual clothes like jeans and tops, but I also want a couple of more formal outfits for work. My budget is around $300.
+manager: Great, thanks for sharing that. At ModaMart, we specialize in high-quality, affordable fashion. What sizes are you requiring, and do you have any particular styles or colors in mind?
+client: I'm a size 12 for jeans and medium for tops. I prefer neutral colors like black, white, and navy. As for style, I like classic, timeless pieces.",no_action,0,0,0,0,0,gold_v1; changed=objection_handling|recommendation_type; discovery and value are aligned
+gwenshap_modamart__7_w005_008,public_synthetic,modamart__7,5,8,"manager,client,manager,client","manager: Great, thanks for sharing that. At ModaMart, we specialize in high-quality, affordable fashion. What sizes are you requiring, and do you have any particular styles or colors in mind?
+client: I'm a size 12 for jeans and medium for tops. I prefer neutral colors like black, white, and navy. As for style, I like classic, timeless pieces.
+manager: Got it. We have a range of jeans that are known for their great fit, like our High-Waist Slim Jeans. For tops, we recently launched a line of classic blouses that would pair nicely with those jeans for both casual and formal settings.
+client: That sounds good, but I'm worried about the quality. I’ve bought clothes online before that ended up looking cheap or falling apart after a few washes.",handle_objection,1,1,0,0,0,gold_v1; kept; quality concern appears at window end
+gwenshap_modamart__7_w007_010,public_synthetic,modamart__7,7,10,"manager,client,manager,client","manager: Got it. We have a range of jeans that are known for their great fit, like our High-Waist Slim Jeans. For tops, we recently launched a line of classic blouses that would pair nicely with those jeans for both casual and formal settings.
+client: That sounds good, but I'm worried about the quality. I’ve bought clothes online before that ended up looking cheap or falling apart after a few washes.
+manager: I completely understand your concern. What sets ModaMart apart is our commitment to quality. We offer a 90-day return policy and quality guarantees on all our items. Plus, we have thousands of customer reviews if you'd like to read about their experiences.
+client: That’s reassuring. But how do I know if the fit will be right? Online shopping can be a bit hit or miss for me.",handle_objection,1,1,0,0,0,gold_v1; changed=recommendation_type; quality handled; fit concern appears
+gwenshap_modamart__7_w009_012,public_synthetic,modamart__7,9,12,"manager,client,manager,client","manager: I completely understand your concern. What sets ModaMart apart is our commitment to quality. We offer a 90-day return policy and quality guarantees on all our items. Plus, we have thousands of customer reviews if you'd like to read about their experiences.
+client: That’s reassuring. But how do I know if the fit will be right? Online shopping can be a bit hit or miss for me.
+manager: A good fit is crucial. Each of our product pages includes detailed sizing charts and customer reviews specifically mentioning fit. Additionally, we offer free returns, so you can try on items risk-free and return or exchange anything that doesn't work.
+client: That’s helpful to know. It sounds pretty good, but I’d like to think it over and maybe browse your site before making a decision.",fix_next_step,1,0,1,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; fit handled; client wants to think/browse
+gwenshap_modamart__7_w011_014,public_synthetic,modamart__7,11,14,"manager,client,manager,client","manager: A good fit is crucial. Each of our product pages includes detailed sizing charts and customer reviews specifically mentioning fit. Additionally, we offer free returns, so you can try on items risk-free and return or exchange anything that doesn't work.
+client: That’s helpful to know. It sounds pretty good, but I’d like to think it over and maybe browse your site before making a decision.
+manager: Of course, take all the time you need. If you’d like, I can also send you an email with direct links to our bestsellers within your criteria. That way, you can easily find what you’re looking for.
+client: Yes, please do. That would make it easier for me to browse.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery|early_presentation_before_discovery|recommendation_type; send-links next step is accepted
+gwenshap_modamart__7_w013_016,public_synthetic,modamart__7,13,16,"manager,client,manager,client","manager: Of course, take all the time you need. If you’d like, I can also send you an email with direct links to our bestsellers within your criteria. That way, you can easily find what you’re looking for.
+client: Yes, please do. That would make it easier for me to browse.
+manager: Absolutely. I'll get that email over to you right after we hang up. If you have any other questions, feel free to reach out to me directly. My contact information will also be in the email.
+client: Thank you, Alex. You've been very helpful.",no_action,0,0,0,0,0,gold_v1; changed=needs_discovery; email timing/contact details are stated
+gwenshap_modamart__7_w015_018,public_synthetic,modamart__7,15,18,"manager,client,manager,client","manager: Absolutely. I'll get that email over to you right after we hang up. If you have any other questions, feel free to reach out to me directly. My contact information will also be in the email.
+client: Thank you, Alex. You've been very helpful.
+manager: You’re welcome! Have a great day, and I look forward to helping you find the perfect outfits at ModaMart.
+client: Thanks, you too.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed|recommendation_type; closing window only
+gwenshap_modamart__8_w001_004,public_synthetic,modamart__8,1,4,"manager,client,manager,client","manager: Thank you for calling ModaMart! This is Sarah, how can I assist you today?
+client: Hi, I'm looking for some information on your latest winter collection. I'm particularly interested in jackets.
+manager: Absolutely! Our new winter collection just launched, and we have some great jackets in various styles. Are you looking for something more casual or formal?
+client: I'm going to need something versatile. You know, something I can wear to work but also on weekends. And it has to be warm because the last jacket I bought from another store wasn’t warm enough.",anchor_value,1,0,0,1,0,gold_v1; changed=next_step_fixed|recommendation_type; warm/versatile need is discovered; value not yet anchored
+gwenshap_modamart__8_w003_006,public_synthetic,modamart__8,3,6,"manager,client,manager,client","manager: Absolutely! Our new winter collection just launched, and we have some great jackets in various styles. Are you looking for something more casual or formal?
+client: I'm going to need something versatile. You know, something I can wear to work but also on weekends. And it has to be warm because the last jacket I bought from another store wasn’t warm enough.
+manager: I understand. Staying warm in winter is crucial. All our winter jackets are insulated, but for a versatile option, I recommend our ""Everest"" jacket. It's designed to be both work-appropriate and casual.
+client: That sounds good, but I'm also concerned about the fit. I'm tall and often find it hard to get a good fit off the rack.",handle_objection,1,1,0,0,0,gold_v1; kept; recommendation given; fit concern appears
+gwenshap_modamart__8_w005_008,public_synthetic,modamart__8,5,8,"manager,client,manager,client","manager: I understand. Staying warm in winter is crucial. All our winter jackets are insulated, but for a versatile option, I recommend our ""Everest"" jacket. It's designed to be both work-appropriate and casual.
+client: That sounds good, but I'm also concerned about the fit. I'm tall and often find it hard to get a good fit off the rack.
+manager: I hear you. Fit can be a tricky issue. The ""Everest"" jacket comes in a variety of sizes, including tall options. If you like, I can check the availability in your size and possibly suggest some alternatives.
+client: Sure, that would be helpful.",no_action,0,0,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; fit concern handled and client accepts inventory check
+gwenshap_modamart__8_w007_010,public_synthetic,modamart__8,7,10,"manager,client,manager,client","manager: I hear you. Fit can be a tricky issue. The ""Everest"" jacket comes in a variety of sizes, including tall options. If you like, I can check the availability in your size and possibly suggest some alternatives.
+client: Sure, that would be helpful.
+manager: Great, can you tell me your size? That will help me narrow it down.
+client: I usually wear a large, but like I said, I need it in tall sizes.",no_action,0,0,0,0,0,gold_v1; kept; size discovery continues
+gwenshap_modamart__8_w009_012,public_synthetic,modamart__8,9,12,"manager,client,manager,client","manager: Great, can you tell me your size? That will help me narrow it down.
+client: I usually wear a large, but like I said, I need it in tall sizes.
+manager: Understood. Let me check our inventory... Yes, we have the ""Everest"" in large tall. We also have a similar style called ""Alpine"" which is a bit more fitted but equally warm and versatile.
+client: Okay, that sounds good. But what if it doesn't fit right? Can I return it easily?",handle_objection,1,1,0,0,0,gold_v1; changed=value_articulation; return concern appears after inventory check
+gwenshap_modamart__8_w011_014,public_synthetic,modamart__8,11,14,"manager,client,manager,client","manager: Understood. Let me check our inventory... Yes, we have the ""Everest"" in large tall. We also have a similar style called ""Alpine"" which is a bit more fitted but equally warm and versatile.
+client: Okay, that sounds good. But what if it doesn't fit right? Can I return it easily?
+manager: Definitely, we have a hassle-free return policy. You can return or exchange any item within 30 days of purchase, no questions asked.
+client: Alright. I think I'll go with the ""Everest"" jacket. Can you help me place the order?",fix_next_step,1,0,1,0,0,gold_v1; changed=recommendation_type; return concern handled; client asks to order
+gwenshap_modamart__8_w013_016,public_synthetic,modamart__8,13,16,"manager,client,manager,client","manager: Definitely, we have a hassle-free return policy. You can return or exchange any item within 30 days of purchase, no questions asked.
+client: Alright. I think I'll go with the ""Everest"" jacket. Can you help me place the order?
+manager: Of course! I’ll need a few details to complete the order. How would you like to make the payment?
+client: I’ll use my credit card.",no_action,0,0,0,0,0,gold_v1; changed=value_articulation|early_presentation_before_discovery|recommendation_type; payment detail collection
+gwenshap_modamart__8_w015_018,public_synthetic,modamart__8,15,18,"manager,client,manager,client","manager: Of course! I’ll need a few details to complete the order. How would you like to make the payment?
+client: I’ll use my credit card.
+manager: Perfect. I'll just need your shipping address and payment details to complete your order. Would you like an email confirmation?
+client: Yes, please. How long will the shipping take?",no_action,0,0,0,0,0,gold_v1; kept; shipping question appears but is informational
+gwenshap_modamart__8_w017_020,public_synthetic,modamart__8,17,20,"manager,client,manager,client","manager: Perfect. I'll just need your shipping address and payment details to complete your order. Would you like an email confirmation?
+client: Yes, please. How long will the shipping take?
+manager: Standard shipping typically takes 3-5 business days. You’ll receive tracking information via email once the order has been shipped.
+client: Great, I appreciate the help!",no_action,0,0,0,0,0,gold_v1; changed=value_articulation|next_step_fixed|recommendation_type; shipping/tracking information fixed
+gwenshap_modamart__8_w019_022,public_synthetic,modamart__8,19,22,"manager,client,manager,client","manager: Standard shipping typically takes 3-5 business days. You’ll receive tracking information via email once the order has been shipped.
+client: Great, I appreciate the help!
+manager: My pleasure! Your order will be processed shortly. If you have any other questions or need further assistance, don't hesitate to reach out.
+client: Will do. Thanks again!",no_action,0,0,0,0,0,gold_v1; changed=recommendation_type; order processing next step stated
+gwenshap_modamart__9_w001_004,public_synthetic,modamart__9,1,4,"manager,client,manager,client","manager: Hi, thank you for calling ModaMart. This is Jamie, how can I assist you today?
+client: Hi Jamie, I’ve been having some issues with an order I recently placed.
+manager: I’m sorry to hear that. Could you provide me with your order number so I can look into it?
+client: Sure, it’s 56789.",no_action,0,0,0,0,0,gold_v1; changed=next_step_fixed; support intake starts with order number
+gwenshap_modamart__9_w003_006,public_synthetic,modamart__9,3,6,"manager,client,manager,client","manager: I’m sorry to hear that. Could you provide me with your order number so I can look into it?
+client: Sure, it’s 56789.
+manager: Alright, let me pull that up. While I'm doing that, can you tell me exactly what's been going wrong?
+client: The main thing is that the dress I received is a different color than what was shown online. Also, it doesn’t fit as expected.",no_action,0,0,0,0,0,gold_v1; changed=recommendation_type; issue discovery continues
+gwenshap_modamart__9_w005_008,public_synthetic,modamart__9,5,8,"manager,client,manager,client","manager: Alright, let me pull that up. While I'm doing that, can you tell me exactly what's been going wrong?
+client: The main thing is that the dress I received is a different color than what was shown online. Also, it doesn’t fit as expected.
+manager: I see. I apologize for that inconvenience. Let me first address the color issue. Can you describe the discrepancy between the color you saw online and the one you received?
+client: The dress was supposed to be a light blue, but what I got is more of a teal.",no_action,0,0,0,0,0,gold_v1; changed=recommendation_type; color discrepancy discovery continues
+gwenshap_modamart__9_w007_010,public_synthetic,modamart__9,7,10,"manager,client,manager,client","manager: I see. I apologize for that inconvenience. Let me first address the color issue. Can you describe the discrepancy between the color you saw online and the one you received?
+client: The dress was supposed to be a light blue, but what I got is more of a teal.
+manager: Thank you for pointing that out. Sometimes colors can appear differently due to screen settings. We can certainly look into that for you. Regarding the fit, did you use our sizing guide when you placed the order?
+client: Yes, I did, but it’s still too tight around the waist.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|recommendation_type; color issue addressed; fit issue appears
+gwenshap_modamart__9_w009_012,public_synthetic,modamart__9,9,12,"manager,client,manager,client","manager: Thank you for pointing that out. Sometimes colors can appear differently due to screen settings. We can certainly look into that for you. Regarding the fit, did you use our sizing guide when you placed the order?
+client: Yes, I did, but it’s still too tight around the waist.
+manager: I'm really sorry to hear that. We do our best to create accurate sizing guides, but it sounds like this one didn't match up for you. We can process an exchange for a different size or even a return if you prefer.
+client: I think I’d rather return it. But what about the return shipping, do I have to pay for that?",handle_objection,1,1,0,0,0,gold_v1; changed=needs_discovery|objection_handling; fit issue handled; return-shipping question appears
+gwenshap_modamart__9_w011_014,public_synthetic,modamart__9,11,14,"manager,client,manager,client","manager: I'm really sorry to hear that. We do our best to create accurate sizing guides, but it sounds like this one didn't match up for you. We can process an exchange for a different size or even a return if you prefer.
+client: I think I’d rather return it. But what about the return shipping, do I have to pay for that?
+manager: For cases where the item is not as described or doesn't fit as expected despite following our sizing guide, we cover the return shipping costs. I'll email you a prepaid return label and instructions on how to send it back.
+client: Okay, that sounds good. What’s the next step after I send it back?",fix_next_step,1,0,1,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; label/instructions offered; client asks what happens next
+gwenshap_modamart__9_w013_016,public_synthetic,modamart__9,13,16,"manager,client,manager,client","manager: For cases where the item is not as described or doesn't fit as expected despite following our sizing guide, we cover the return shipping costs. I'll email you a prepaid return label and instructions on how to send it back.
+client: Okay, that sounds good. What’s the next step after I send it back?
+manager: Once we receive the returned dress, we’ll process your refund within 3-5 business days and send you a confirmation email. Is there anything else I can help you with today?
+client: Actually, I was looking at another dress on your website. Can you tell me about your exchange policy?",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|early_presentation_before_discovery|recommendation_type; refund next step stated; exchange-policy question appears
+gwenshap_modamart__9_w015_018,public_synthetic,modamart__9,15,18,"manager,client,manager,client","manager: Once we receive the returned dress, we’ll process your refund within 3-5 business days and send you a confirmation email. Is there anything else I can help you with today?
+client: Actually, I was looking at another dress on your website. Can you tell me about your exchange policy?
+manager: Certainly! If you decide on another dress and it ends up not being right, you have a 30-day window to return or exchange it. Just keep the tags on and bring the original receipt.
+client: Alright, that covers everything. Thanks for your help.",no_action,0,0,0,0,0,gold_v1; changed=objection_handling|next_step_fixed|early_presentation_before_discovery|recommendation_type; exchange policy answered
+gwenshap_modamart__9_w017_020,public_synthetic,modamart__9,17,20,"manager,client,manager,client","manager: Certainly! If you decide on another dress and it ends up not being right, you have a 30-day window to return or exchange it. Just keep the tags on and bring the original receipt.
+client: Alright, that covers everything. Thanks for your help.
+manager: You’re welcome! I'll send that return label shortly. Have a great day, and feel free to contact us if you have any more questions.
+client: Will do, thanks.",no_action,0,0,0,0,0,gold_v1; changed=recommendation_type; return label send timing stated
+gwenshap_nexiv-solutions__0_w001_004,public_synthetic,nexiv-solutions__0,1,4,"manager,client,manager,client","manager: Good afternoon! My name is Kelly from Nexiv Solutions. How are you today?
+client: Hi Kelly, I’m doing well, thanks. How about you?
+manager: I'm great, thanks for asking! I wanted to take a few minutes to discuss how Nexiv Solutions might be able to help streamline your tech operations. Do you have some time right now?
+client: Sure, I have a few minutes.",avoid_early_presentation,1,0,0,0,1,gold_v1; changed=needs_discovery|next_step_fixed|early_presentation_before_discovery|recommendation_type; generic value pitch appears before discovery
+gwenshap_nexiv-solutions__0_w003_006,public_synthetic,nexiv-solutions__0,3,6,"manager,client,manager,client","manager: I'm great, thanks for asking! I wanted to take a few minutes to discuss how Nexiv Solutions might be able to help streamline your tech operations. Do you have some time right now?
+client: Sure, I have a few minutes.
+manager: Fantastic. Can you tell me a bit about your current tech setup and any challenges you’re facing?
+client: Well, we are currently using multiple platforms to manage our customer data, and it's becoming increasingly difficult to keep everything synchronized. We often have data discrepancies and it's a real pain point for us.",anchor_value,1,0,0,1,0,gold_v1; changed=value_articulation|recommendation_type; pain discovered; tailored value not yet stated
+gwenshap_nexiv-solutions__0_w005_008,public_synthetic,nexiv-solutions__0,5,8,"manager,client,manager,client","manager: Fantastic. Can you tell me a bit about your current tech setup and any challenges you’re facing?
+client: Well, we are currently using multiple platforms to manage our customer data, and it's becoming increasingly difficult to keep everything synchronized. We often have data discrepancies and it's a real pain point for us.
+manager: I understand. Data inconsistencies can be very frustrating. How much time do you think your team spends dealing with these issues?
+client: Honestly, we’re spending several hours each week just trying to reconcile data from different sources. It's not just time-consuming but also affects our productivity.",anchor_value,1,0,0,1,0,gold_v1; changed=objection_handling; pain impact quantified; value not yet anchored
+gwenshap_nexiv-solutions__0_w007_010,public_synthetic,nexiv-solutions__0,7,10,"manager,client,manager,client","manager: I understand. Data inconsistencies can be very frustrating. How much time do you think your team spends dealing with these issues?
+client: Honestly, we’re spending several hours each week just trying to reconcile data from different sources. It's not just time-consuming but also affects our productivity.
+manager: That sounds really tough. What have you tried so far to address this issue?
+client: We've tried using third-party integration tools, but they have their own limitations and often create more problems than they solve.",anchor_value,1,0,0,1,0,gold_v1; changed=recommendation_type; current workaround explored; value still missing
+gwenshap_nexiv-solutions__0_w009_012,public_synthetic,nexiv-solutions__0,9,12,"manager,client,manager,client","manager: That sounds really tough. What have you tried so far to address this issue?
+client: We've tried using third-party integration tools, but they have their own limitations and often create more problems than they solve.
+manager: I see. It's crucial to have a reliable solution. At Nexiv Solutions, we offer a unified platform that can integrate seamlessly with your existing systems and centralize your customer data to ensure consistency. Would that be something you’re interested in?
+client: It sounds promising, but we’re concerned about the implementation process. We can’t afford much downtime.",handle_objection,1,1,0,0,0,gold_v1; changed=objection_handling|recommendation_type; solution anchored; implementation concern appears
+gwenshap_nexiv-solutions__0_w011_014,public_synthetic,nexiv-solutions__0,11,14,"manager,client,manager,client","manager: I see. It's crucial to have a reliable solution. At Nexiv Solutions, we offer a unified platform that can integrate seamlessly with your existing systems and centralize your customer data to ensure consistency. Would that be something you’re interested in?
+client: It sounds promising, but we’re concerned about the implementation process. We can’t afford much downtime.
+manager: That’s a valid concern. Our solution is designed to integrate with minimal disruption to your operations. We also provide comprehensive support during the implementation process to ensure a smooth transition. How does that align with your needs?
+client: It does sound reassuring, but we’re also on a tight budget. Can you give me an idea of the cost?",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; implementation handled; budget concern appears
+gwenshap_nexiv-solutions__0_w013_016,public_synthetic,nexiv-solutions__0,13,16,"manager,client,manager,client","manager: That’s a valid concern. Our solution is designed to integrate with minimal disruption to your operations. We also provide comprehensive support during the implementation process to ensure a smooth transition. How does that align with your needs?
+client: It does sound reassuring, but we’re also on a tight budget. Can you give me an idea of the cost?
+manager: Absolutely. While it varies based on the specific package and the size of your operation, I'd be happy to provide a detailed quote after understanding more about your requirements. We often find that the efficiency gained offsets the initial investment quite quickly.
+client: Okay, that makes sense. Can you send over some more information?",fix_next_step,1,0,1,0,0,gold_v1; changed=objection_handling|recommendation_type; cost handled; client asks for information
+gwenshap_nexiv-solutions__0_w015_018,public_synthetic,nexiv-solutions__0,15,18,"manager,client,manager,client","manager: Absolutely. While it varies based on the specific package and the size of your operation, I'd be happy to provide a detailed quote after understanding more about your requirements. We often find that the efficiency gained offsets the initial investment quite quickly.
+client: Okay, that makes sense. Can you send over some more information?
+manager: Of course. I’ll email you a detailed proposal along with case studies that demonstrate how we've helped similar companies. Can we schedule a follow-up call for later this week to discuss any questions you might have?
+client: Sure, I am available on Thursday afternoon.",no_action,0,0,0,0,0,gold_v1; kept; proposal/cases and follow-up request are concrete
+gwenshap_nexiv-solutions__0_w017_020,public_synthetic,nexiv-solutions__0,17,20,"manager,client,manager,client","manager: Of course. I’ll email you a detailed proposal along with case studies that demonstrate how we've helped similar companies. Can we schedule a follow-up call for later this week to discuss any questions you might have?
+client: Sure, I am available on Thursday afternoon.
+manager: Perfect! I'll set up a meeting for Thursday at 2 PM. I’ll send a calendar invite shortly. Is there anything else you’d like to discuss today?
+client: No, that covers it for now. Thanks, Kelly.",no_action,0,0,0,0,0,gold_v1; kept; Thursday 2 PM meeting fixed
+gwenshap_nexiv-solutions__0_w019_022,public_synthetic,nexiv-solutions__0,19,22,"manager,client,manager,client","manager: Perfect! I'll set up a meeting for Thursday at 2 PM. I’ll send a calendar invite shortly. Is there anything else you’d like to discuss today?
+client: No, that covers it for now. Thanks, Kelly.
+manager: You're welcome! Looking forward to our call on Thursday. Have a great day.
+client: You too, bye.",no_action,0,0,0,0,0,gold_v1; changed=recommendation_type; closing references scheduled call
+gwenshap_nexiv-solutions__1_w001_004,public_synthetic,nexiv-solutions__1,1,4,"manager,client,manager,client","manager: Hi, this is Alex from Nexiv Solutions. Am I speaking with Jamie?
+client: Yes, this is Jamie. How can I help you?
+manager: Great to speak with you, Jamie. I wanted to introduce you to some of the solutions Nexiv offers. We're helping companies like yours streamline their operations with our integrated software suite. Could I ask, what are some of the challenges you're facing with your current tech setup?
+client: Honestly, we're struggling with data consolidation. We have different systems for inventory, sales, and customer management, and it's a hassle to get a clear view of everything.",avoid_early_presentation,1,0,0,0,1,gold_v1; changed=early_presentation_before_discovery|recommendation_type; introductory product pitch precedes discovery question
+gwenshap_nexiv-solutions__1_w003_006,public_synthetic,nexiv-solutions__1,3,6,"manager,client,manager,client","manager: Great to speak with you, Jamie. I wanted to introduce you to some of the solutions Nexiv offers. We're helping companies like yours streamline their operations with our integrated software suite. Could I ask, what are some of the challenges you're facing with your current tech setup?
+client: Honestly, we're struggling with data consolidation. We have different systems for inventory, sales, and customer management, and it's a hassle to get a clear view of everything.
+manager: I hear that a lot. Data fragmentation can be a real headache. How much time would you say your team spends on manual data reconciliation each week?
+client: Probably around ten hours or more. It's really inefficient.",anchor_value,1,0,0,1,0,gold_v1; changed=value_articulation|recommendation_type; pain quantified; tailored value not yet stated
+gwenshap_nexiv-solutions__1_w005_008,public_synthetic,nexiv-solutions__1,5,8,"manager,client,manager,client","manager: I hear that a lot. Data fragmentation can be a real headache. How much time would you say your team spends on manual data reconciliation each week?
+client: Probably around ten hours or more. It's really inefficient.
+manager: That sounds frustrating. Our platform offers a unified dashboard that brings all your data into one place, reducing the need for manual efforts. Could that help reduce those ten hours for your team?
+client: It sounds promising, but we’ve tried new systems before, and the transition is always difficult. We're worried about the downtime and the learning curve.",handle_objection,1,1,0,0,0,gold_v1; kept; value tied to hours saved; transition concern appears
+gwenshap_nexiv-solutions__1_w007_010,public_synthetic,nexiv-solutions__1,7,10,"manager,client,manager,client","manager: That sounds frustrating. Our platform offers a unified dashboard that brings all your data into one place, reducing the need for manual efforts. Could that help reduce those ten hours for your team?
+client: It sounds promising, but we’ve tried new systems before, and the transition is always difficult. We're worried about the downtime and the learning curve.
+manager: I understand your concern. Rolling out new software can be challenging. At Nexiv, we provide dedicated onboarding and training support to ensure a smooth transition. Plus, our customer success team is always on hand to assist with any issues. Would that help alleviate some of your concerns?
+client: It might, but we're also cautious about the cost. Budget is a big factor for us right now.",handle_objection,1,1,0,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; transition handled; cost concern appears
+gwenshap_nexiv-solutions__1_w009_012,public_synthetic,nexiv-solutions__1,9,12,"manager,client,manager,client","manager: I understand your concern. Rolling out new software can be challenging. At Nexiv, we provide dedicated onboarding and training support to ensure a smooth transition. Plus, our customer success team is always on hand to assist with any issues. Would that help alleviate some of your concerns?
+client: It might, but we're also cautious about the cost. Budget is a big factor for us right now.
+manager: Absolutely, cost is a key consideration. Our solutions are scalable, and we can tailor a package that fits both your needs and your budget. More often than not, our customers find that the efficiencies they gain actually save them money in the long run. How does that sound?
+client: It's worth exploring. What would be the next steps if we were interested in finding out more?",fix_next_step,1,0,1,0,0,gold_v1; changed=early_presentation_before_discovery|recommendation_type; cost handled; client asks next steps
+gwenshap_nexiv-solutions__1_w011_014,public_synthetic,nexiv-solutions__1,11,14,"manager,client,manager,client","manager: Absolutely, cost is a key consideration. Our solutions are scalable, and we can tailor a package that fits both your needs and your budget. More often than not, our customers find that the efficiencies they gain actually save them money in the long run. How does that sound?
+client: It's worth exploring. What would be the next steps if we were interested in finding out more?
+manager: Great to hear! We can set up a demo tailored to your specific processes and pain points. From there, we would scope out a custom plan and provide a detailed quote. Could we schedule a time for the demo this week?
+client: Sure, I have some availability on Thursday afternoon.",no_action,0,0,0,0,0,gold_v1; kept; tailored demo next step requested

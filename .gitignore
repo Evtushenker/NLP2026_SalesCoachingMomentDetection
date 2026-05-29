@@ -27,8 +27,13 @@ Thumbs.db
 # Data and model artifacts
 project/data/raw/
 project/data/interim/
-project/data/processed/
-project/data/samples/
+project/data/processed/*
+!project/data/processed/
+!project/data/processed/focused_task_cv_predictions.csv
+!project/data/processed/focused_task_cv_results.json
+project/data/samples/*
+!project/data/samples/
+!project/data/samples/gwenshap_focused_gold_tasks.csv
 project/models/
 project/checkpoints/
 project/runs/

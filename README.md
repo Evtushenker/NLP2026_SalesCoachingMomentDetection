@@ -16,7 +16,7 @@ The project uses the public Hugging Face dataset [`gwenshap/sales-transcripts`](
 `-- .gitignore
 ```
 
-Generated data, reports, model outputs, and raw transcripts are intentionally not stored in Git.
+Raw transcripts, intermediate files, reports, and model artifacts are intentionally not stored in Git. The repository includes a compact reviewed gold sample and focused-task prediction artifacts so the main evaluation scripts can be run without rebuilding the full dataset first.
 
 ## Main Task
 
@@ -58,6 +58,16 @@ Review-queue evaluation at a top-20% review budget:
 | `actionable_coaching_needed` | TF-IDF + Logistic Regression | 0.950 | 0.322 | 1.610x |
 | `unresolved_customer_concern` | open-concern dialogue rule | 0.900 | 0.462 | 2.308x |
 
+## Included Data
+
+The following small artifacts are committed for reproducibility:
+
+- `project/data/samples/gwenshap_focused_gold_tasks.csv`
+- `project/data/processed/focused_task_cv_results.json`
+- `project/data/processed/focused_task_cv_predictions.csv`
+
+They are enough to rerun focused-task evaluation, prioritization evaluation, and recommendation demos. Raw transcripts and intermediate datasets can still be regenerated from the public Hugging Face dataset.
+
 ## Setup
 
 Install dependencies:
@@ -70,32 +80,7 @@ The dataset loader uses Hugging Face `datasets`, so the first data-preparation r
 
 ## Run
 
-Prepare public transcripts and build dialogue windows:
-
-```bash
-python project/src/data/prepare_gwenshap_sales_transcripts.py \
-  --raw-dir project/data/raw/gwenshap_sales_transcripts/transcripts \
-  --output project/data/processed/gwenshap_candidate_windows.csv \
-  --sample-output project/data/samples/gwenshap_sample_100_windows.csv
-```
-
-Create weak labels for a window sample:
-
-```bash
-python project/src/data/weak_label_sales_windows.py \
-  --input project/data/samples/gwenshap_sample_100_windows.csv \
-  --output project/data/samples/gwenshap_sample_100_windows_weak_labeled.csv
-```
-
-Build focused binary labels from a reviewed gold-label file:
-
-```bash
-python project/src/data/build_focused_tasks.py \
-  --input project/data/samples/gwenshap_sample_100_windows_gold_labeled.csv \
-  --output project/data/samples/gwenshap_focused_gold_tasks.csv
-```
-
-Run focused-task evaluation:
+Run the focused-task evaluation directly from the included gold sample:
 
 ```bash
 python project/src/models/train_focused_tasks.py \
@@ -104,7 +89,7 @@ python project/src/models/train_focused_tasks.py \
   --predictions-output project/data/processed/focused_task_cv_predictions.csv
 ```
 
-Evaluate prioritization quality:
+Evaluate prioritization quality from the included out-of-fold predictions:
 
 ```bash
 python project/src/evaluation/evaluate_prioritization.py \
@@ -113,7 +98,7 @@ python project/src/evaluation/evaluate_prioritization.py \
   --report-output project/outputs/prioritization_results.md
 ```
 
-Build evidence and confidence demos:
+Build evidence and confidence demos from the included out-of-fold predictions:
 
 ```bash
 python project/src/recommendations/build_evidence_review.py \
@@ -127,6 +112,33 @@ python project/src/recommendations/build_confidence_demo.py \
   --predictions project/data/processed/focused_task_cv_predictions.csv \
   --output project/data/samples/gwenshap_confidence_demo_30.csv \
   --limit 30
+```
+
+To rebuild windows from the public source dataset, run:
+
+Prepare public transcripts and build dialogue windows:
+
+```bash
+python project/src/data/prepare_gwenshap_sales_transcripts.py \
+  --raw-dir project/data/raw/gwenshap_sales_transcripts/transcripts \
+  --output project/data/processed/gwenshap_candidate_windows.csv \
+  --sample-output project/data/samples/gwenshap_sample_100_windows.csv
+```
+
+Then create weak labels for a window sample:
+
+```bash
+python project/src/data/weak_label_sales_windows.py \
+  --input project/data/samples/gwenshap_sample_100_windows.csv \
+  --output project/data/samples/gwenshap_sample_100_windows_weak_labeled.csv
+```
+
+Build focused binary labels from a reviewed gold-label file:
+
+```bash
+python project/src/data/build_focused_tasks.py \
+  --input project/data/samples/gwenshap_sample_100_windows_gold_labeled.csv \
+  --output project/data/samples/gwenshap_focused_gold_tasks.csv
 ```
 
 Run the window-size ablation:
@@ -144,7 +156,3 @@ python project/src/evaluation/evaluate_window_ablation.py \
   --report-output project/outputs/window_size_ablation_results.md \
   --window-sizes 2,4,6
 ```
-
-## Report
-
-`main.tex` is a self-contained Overleaf report. It does not depend on external figures or a BibTeX file.
